@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Software Developer Foundations — Learning Blueprint</title>
+<meta name="description" content="A free, student-facing roadmap from zero computer experience to entry-level software development.">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem("theme"); } catch (e) {}
+    if (saved === "light" || saved === "dark") {
+      document.documentElement.setAttribute("data-theme", saved);
+    }
+  })();
+</script>
+</head>
+<body>
+
+<div id="progress-bar" class="progress-bar" aria-hidden="true"></div>
+
+<button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar">
+  <span></span><span></span><span></span>
+</button>
+
+<div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+      <div>
+        <p class="sidebar-eyebrow">Learning Blueprint</p>
+        <h1 class="sidebar-title">Software Developer Foundations</h1>
+      </div>
+    </div>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Switch to light theme" title="Toggle color theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2.5 12h3M18.5 12h3M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
+    </button>
+  </div>
+
+  <div class="level-switcher" role="tablist" aria-label="Curriculum level">
+    <button class="level-pill active" role="tab" aria-selected="true">Beginner</button>
+    <button class="level-pill" role="tab" aria-selected="false" disabled title="Coming soon">Intermediate <span class="soon-badge">Soon</span></button>
+    <button class="level-pill" role="tab" aria-selected="false" disabled title="Coming soon">Advanced <span class="soon-badge">Soon</span></button>
+  </div>
+
+  <div class="sidebar-search">
+    <input type="search" id="nav-search" placeholder="Filter contents…" aria-label="Filter table of contents">
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <ul>
+      <li><a href="#overview" class="nav-link">Overview</a></li>
+      <li><a href="#curriculum-structure" class="nav-link">Curriculum Structure</a></li>
+
+      <li class="nav-group" data-stage="1">
+        <p class="nav-group-label"><span class="stage-dot"></span>Stage I — Computer Literate</p>
+        <ul>
+          <li><a href="#track-1" class="nav-link">01 · Computer Literacy</a></li>
+          <li><a href="#track-2" class="nav-link">02 · Intro to Programming</a></li>
+          <li><a href="#track-3" class="nav-link">03 · Software Dev World</a></li>
+          <li><a href="#track-4" class="nav-link">04 · Documentation</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-group" data-stage="2">
+        <p class="nav-group-label"><span class="stage-dot"></span>Stage II — Learn to Program</p>
+        <ul>
+          <li><a href="#track-5" class="nav-link">05 · Pascal</a></li>
+          <li><a href="#track-6" class="nav-link">06 · Java</a></li>
+          <li><a href="#track-7" class="nav-link">07 · Source Control</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-group" data-stage="3">
+        <p class="nav-group-label"><span class="stage-dot"></span>Stage III — Web &amp; Beyond</p>
+        <ul>
+          <li><a href="#track-8" class="nav-link">08 · HTML + CSS</a></li>
+          <li><a href="#track-9" class="nav-link">09 · JavaScript</a></li>
+          <li><a href="#track-10" class="nav-link">10 · Python</a></li>
+          <li><a href="#track-11" class="nav-link">11 · Go</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#language-independence" class="nav-link">Language-Independence Test</a></li>
+      <li><a href="#resource-strategy" class="nav-link">Resource Strategy</a></li>
+      <li><a href="#project-progression" class="nav-link">Project Progression</a></li>
+      <li><a href="#learning-rules" class="nav-link">How to Use This Guide</a></li>
+      <li><a href="#final-outcome" class="nav-link">Final Outcome</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main id="main-content" class="content">
+  <div id="content-root">
+    <!--
+      Each section below is written via document.write() from its own
+      small file under partials/ — plain <script src> includes rather
+      than fetch()/XHR, so the page works identically whether it's
+      opened straight from disk (file://) or served over http(s).
+    -->
+    <script src="partials/overview.js"></script>
+    <script src="partials/curriculum-structure.js"></script>
+    <script src="partials/track-01-computer-literacy.js"></script>
+    <script src="partials/track-02-intro-programming.js"></script>
+    <script src="partials/track-03-software-dev-world.js"></script>
+    <script src="partials/track-04-documentation.js"></script>
+    <script src="partials/assessment-stage-1.js"></script>
+    <script src="partials/track-05-pascal.js"></script>
+    <script src="partials/track-06-java.js"></script>
+    <script src="partials/track-07-source-control.js"></script>
+    <script src="partials/assessment-stage-2.js"></script>
+    <script src="partials/track-08-html-css.js"></script>
+    <script src="partials/track-09-javascript.js"></script>
+    <script src="partials/track-10-python.js"></script>
+    <script src="partials/track-11-go.js"></script>
+    <script src="partials/assessment-stage-3.js"></script>
+    <script src="partials/language-independence.js"></script>
+    <script src="partials/resource-strategy.js"></script>
+    <script src="partials/project-progression.js"></script>
+    <script src="partials/learning-rules.js"></script>
+    <script src="partials/final-outcome.js"></script>
+  </div>
+
+  <footer class="content-footer">
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑ Back to top</button>
+  </footer>
+</main>
+
+<div id="quiz-root"></div>
+
+<!-- Question banks: plain script includes for the same file:// reason as above. -->
+<script src="data/questions/track-01-computer-literacy.js"></script>
+<script src="data/questions/track-02-intro-programming.js"></script>
+<script src="data/questions/track-03-software-dev-world.js"></script>
+<script src="data/questions/track-04-documentation.js"></script>
+<script src="data/questions/track-05-pascal.js"></script>
+<script src="data/questions/track-06-java.js"></script>
+<script src="data/questions/track-07-source-control.js"></script>
+<script src="data/questions/track-08-html-css.js"></script>
+<script src="data/questions/track-09-javascript.js"></script>
+<script src="data/questions/track-10-python.js"></script>
+<script src="data/questions/track-11-go.js"></script>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/quiz.js"></script>
+</body>
+</html>
