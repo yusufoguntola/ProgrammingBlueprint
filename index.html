@@ -14,9 +14,7 @@
   (function () {
     var saved = null;
     try { saved = localStorage.getItem("theme"); } catch (e) {}
-    if (saved === "light" || saved === "dark") {
-      document.documentElement.setAttribute("data-theme", saved);
-    }
+    document.documentElement.setAttribute("data-theme", saved === "dark" ? "dark" : "light");
   })();
 </script>
 </head>

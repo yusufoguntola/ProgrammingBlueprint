@@ -10,12 +10,11 @@
   var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-link"));
 
   /* -------------------------------------------------
-     Theme toggle (persisted, defaults to system preference)
+     Theme toggle (persisted, defaults to light)
   ------------------------------------------------- */
   function currentTheme() {
     var explicit = document.documentElement.getAttribute("data-theme");
-    if (explicit === "light" || explicit === "dark") return explicit;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    return explicit === "dark" ? "dark" : "light";
   }
 
   function applyTheme(theme) {
